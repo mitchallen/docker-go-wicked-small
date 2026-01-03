@@ -23,6 +23,8 @@ docker image inspect tiny-go --format='{{.Size}}'
 docker image inspect tiny-go --format='{{.RepoTags}} => {{.Size}}'
 ```
 
+Note: `docker image inspect` shows the raw bytes while `docker images` includes manifest overhead for multi-platform builds, so the sizes may differ.
+
 * * *
 
 ### Optional Variant: HTTPS-capable (Distroless)
