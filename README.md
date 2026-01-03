@@ -19,6 +19,8 @@ docker run --rm tiny-go
 
 ```sh
 docker images | grep tiny-go
+docker image inspect tiny-go --format='{{.Size}}'
+docker image inspect tiny-go --format='{{.RepoTags}} => {{.Size}}'
 ```
 
 * * *
