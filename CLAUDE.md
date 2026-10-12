@@ -22,7 +22,7 @@ docker images | grep tiny-go
 ## Architecture
 
 The Dockerfile uses a two-stage build:
-1. **Build stage**: Uses `golang:1.22` to compile the Go code into a static binary with `CGO_ENABLED=0` and stripped symbols (`-ldflags="-s -w"`)
+1. **Build stage**: Uses `golang:1.27` to compile the Go code into a static binary with `CGO_ENABLED=0` and stripped symbols (`-ldflags="-s -w"`)
 2. **Runtime stage**: Uses `scratch` (empty image) containing only the compiled binary
 
 The Go source code is embedded directly in the Dockerfile rather than copied from the host filesystem.
